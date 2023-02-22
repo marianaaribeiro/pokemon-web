@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light {
+  --background-page: #f5f5f5;
+
+  --text-color-body: #575757;
+
+  --text-color-primary-button: #ffffff;
+
+  --color-button-see-more: #797979;
+
+  --text-color-interaction-medium-button: #ffffff;
+
+  --border-card: #e0e0e0;
+  --background-card: #ffffff;
+
+  --background-campaign-links: #ffffff;
+  --background-campaign-links-sep: #e0e0e0;
+
+  --color-brand-primary: #0033c6;
+  --color-brand-primary-light: #a4cbe7;
+
+  --color-interaction-medium: #51a559;
+  --color-interaction-light: #c6e6c9;
+}
+
+.dark {
+  --background-page: #000;
+
+  --text-color-body: #575757;
+
+  --text-color-primary-button: #ffffff;
+
+  --color-button-see-more: #797979;
+
+  --text-color-interaction-medium-button: #ffffff;
+
+  --border-card: #e0e0e0;
+  --background-card: #ffffff;
+
+  --background-campaign-links: #ffffff;
+  --background-campaign-links-sep: #e0e0e0;
+
+  --color-brand-primary: orange;
+  --color-brand-primary-light: #fff;
+
+  --color-interaction-medium: red;
+  --color-interaction-light: orange;
+}

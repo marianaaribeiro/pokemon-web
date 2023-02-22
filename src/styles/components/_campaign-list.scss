@@ -1,0 +1,24 @@
+.campaign-list {
+  @apply m-4;
+
+  &__filter {
+    @apply flex mb-3 justify-start;
+
+    &.is-skeleton {
+      height: 36px;
+      @apply inline;
+    }
+
+    .hub-btn {
+      @apply mr-2.5;
+    }
+  }
+
+  &__see-more {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+
+    @apply text-base font-bold text-hub-btn-see-more border-2 border-hub-btn-see-more text-center m-auto ml-0.5 p-2.5;
+  }
+}

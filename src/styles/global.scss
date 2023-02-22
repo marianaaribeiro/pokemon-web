@@ -1,0 +1,20 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.bahia, .ponto {
+  @apply bg-hub-primary text-hub-body;
+}
+
+a {
+  @apply text-hub-primary;
+}
+
+.is-skeleton {
+  color: transparent !important;
+  @apply bg-gray-200 dark:bg-gray-700 bg-auto bg-no-repeat rounded-lg;
+
+  * { 
+    @apply invisible;
+  }
+}

@@ -1,0 +1,11 @@
+.card-info {
+  @apply text-center border border-hub-card rounded-lg my-4 py-3;
+
+  &:not(.is-skeleton) {
+    @apply bg-hub-card;
+  }
+
+  &__title {
+    @apply font-bold pb-2;
+  }
+}

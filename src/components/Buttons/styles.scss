@@ -1,0 +1,37 @@
+%primaryRippleEffect {
+  background-position: center;
+  transition: background 0.35s;
+
+  &:hover {
+    background: var(--color-brand-primary)
+      radial-gradient(circle, transparent 1%, var(--color-brand-primary) 1%)
+      center/15000%;
+  }
+
+  &:active {
+    background-color: var(--color-brand-primary-light);
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+.hub-btn {
+  height: 36px;
+
+  @apply text-sm font-bold text-hub-btn-primary border-hub-btn-primary-out  text-center py-2 px-4 rounded-lg transition ease-in-out delay-150 mr-2 bg-gradient-to-r from-green-300 to-blue-500 hover:scale-110 hover:duration-500  hover:from-pink-500 hover:to-yellow-500;
+
+  &.is-active {
+    @apply font-bold text-hub-btn-primary bg-hub-btn-primary;
+
+    @extend %primaryRippleEffect;
+  }
+  .hub-imgs {
+    margin-top: -8px;
+    margin-left: -38px;
+
+    @apply absolute h-9 mr-2;
+  }
+  &.is-img-left {
+    padding-left: 44px;
+  }
+}

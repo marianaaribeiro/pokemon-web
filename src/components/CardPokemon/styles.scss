@@ -1,0 +1,16 @@
+.card-pokemon {
+  @apply text-center border-hub-card border rounded-lg p-2.5 w-32 h-44;
+
+  &:not(.is-skeleton) {
+    @apply bg-hub-card;
+  }
+
+  &__image {
+    padding-bottom: 87%;
+    @apply rounded-lg bg-auto bg-center w-auto h-auto;
+  }
+
+  &__button {
+    @apply border-hub-card border-t mt-2.5 pt-2.5 text-hub-primary text-sm font-bold leading-5 text-center;
+  }
+}

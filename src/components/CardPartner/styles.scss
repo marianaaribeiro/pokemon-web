@@ -1,0 +1,40 @@
+.card-partner {
+  @apply px-4;
+
+  &__img {
+    width: 117px;
+    height: 117px;
+
+    @apply rounded-lg bg-cover bg-center drop-shadow-md;
+
+    &:not(.is-skeleton) {
+      @apply bg-hub-card;
+    }
+  }
+  &__img-list {
+    width: 80px;
+    height: 80px;
+
+    @apply rounded-lg bg-cover bg-center my-3.5;
+
+    &:not(.is-skeleton) {
+      @apply bg-hub-card;
+    }
+  }
+
+  &__title {
+    @apply text-lg font-bold leading-5;
+  }
+
+  &__description {
+    @apply text-hub-body text-sm font-normal;
+  }
+
+  &__partner-link {
+    @apply flex text-hub-primary font-bold text-sm pt-1.5;
+  }
+
+  &__border {
+    @apply border-hub-card border rounded-lg py-5 px-5 m-5 bg-white;
+  }
+}

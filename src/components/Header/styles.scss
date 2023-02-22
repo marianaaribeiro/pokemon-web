@@ -1,0 +1,14 @@
+.header {
+  &.is-favorite {
+    @apply text-hub-primary text-xl bg-white h-11 relative mb-5 p-2;
+  }
+  &.is-no-favorite {
+    @apply flex items-center justify-center text-hub-primary text-xl bg-white h-11 relative mb-5;
+  }
+  .container-btn {
+    margin-top: -32px;
+    margin-right: -5px;
+
+    @apply flex justify-end;
+  }
+}

@@ -1,0 +1,15 @@
+.page-error {
+  @apply m-4 flex items-center justify-center h-screen;
+
+  &__heading {
+    @apply text-hub-primary text-xl mb-1;
+  }
+
+  svg {
+    @apply m-auto mb-5
+  }
+
+  .hub-btn { 
+    @apply w-full mb-5 h-12 text-base;
+  }
+}
