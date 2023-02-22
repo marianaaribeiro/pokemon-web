@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/15</span>
+                <span class='fraction'>0/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.5% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/8</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/8</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/15</span>
+                <span class='fraction'>0/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -152,7 +152,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -160,16 +160,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -181,13 +181,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -227,7 +227,7 @@ interface CardPokemonProps {
   onLoad: (index: number) =&gt; void
 }
 &nbsp;
-export const CardPokemon = ({
+export const CardPokemon = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span></span>
   index,
   textButton,
   image,
@@ -235,16 +235,16 @@ export const CardPokemon = ({
   handleClick,
   onLoad,
 }: CardPokemonProps): JSX.Element =&gt; {
-  const [loading, setLoading] = useState(false)
-  const [skeleton] = useSkeleton(loading)
-  const [imgCard, setImgCard] = useState&lt;{ name: string; imgs: string }&gt;()
+  const [loading, setLoading] = <span class="cstat-no" title="statement not covered" >useState(false)</span>
+  const [skeleton] = <span class="cstat-no" title="statement not covered" >useSkeleton(loading)</span>
+  const [imgCard, setImgCard] = <span class="cstat-no" title="statement not covered" >useState&lt;{ name: string; imgs: string }&gt;()</span>
 &nbsp;
-  useEffect(() =&gt; {
-    onFetchDetails(image)
+<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    onFetchDetails(image)</span>
   }, [image])
 &nbsp;
-  const onFetchDetails = (urlCard: string): void =&gt; {
-    fetchList(urlCard)
+  const onFetchDetails = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(u</span>rlCard: string): void =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    fetchList(urlCard)</span>
       .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; {
 <span class="cstat-no" title="statement not covered" >        setImgCard({</span>
           name: response.name,
@@ -256,17 +256,17 @@ export const CardPokemon = ({
       })
   }
 &nbsp;
-  return (
+<span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;div className={`card-pokemon ${skeleton()}`}&gt;
       &lt;div
         style={{ backgroundImage: `url(${imgCard?.imgs})` }}
         data-testid="card-pokemon__image"
         className="card-pokemon__image"
-        onClick={() =&gt; handleClick(imgCard?.imgs || '')}
+        onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >handleClick(imgCard?.imgs || '')}</span>
       /&gt;
 &nbsp;
       {loading &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;img</span>
+        &lt;img
           className="absolute invisible"
           onLoad={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >            onLoad(index)</span>
@@ -295,7 +295,7 @@ export const CardPokemon = ({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-22T08:09:00.190Z
+                at 2023-02-22T08:31:55.943Z
             </div>
         <script src="../prettify.js"></script>
         <script>

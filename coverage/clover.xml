@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677053340458" clover="3.2.0">
-  <project timestamp="1677053340458" name="All files">
-    <metrics statements="62" coveredstatements="41" conditionals="50" coveredconditionals="32" methods="24" coveredmethods="12" elements="136" coveredelements="85" complexity="0" loc="62" ncloc="62" packages="8" files="8" classes="8"/>
+<coverage generated="1677054716343" clover="3.2.0">
+  <project timestamp="1677054716343" name="All files">
+    <metrics statements="62" coveredstatements="31" conditionals="50" coveredconditionals="27" methods="24" coveredmethods="8" elements="136" coveredelements="66" complexity="0" loc="62" ncloc="62" packages="8" files="8" classes="8"/>
     <package name="Buttons">
       <metrics statements="7" coveredstatements="6" conditionals="9" coveredconditionals="6" methods="2" coveredmethods="1"/>
       <file name="index.tsx" path="C:\Users\maali\Desktop\stefanini\pokemon-web\src\components\Buttons\index.tsx">
@@ -41,21 +41,21 @@
       </file>
     </package>
     <package name="CardPokemon">
-      <metrics statements="15" coveredstatements="10" conditionals="8" coveredconditionals="5" methods="8" coveredmethods="4"/>
+      <metrics statements="15" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="8" coveredmethods="0"/>
       <file name="index.tsx" path="C:\Users\maali\Desktop\stefanini\pokemon-web\src\components\CardPokemon\index.tsx">
-        <metrics statements="15" coveredstatements="10" conditionals="8" coveredconditionals="5" methods="8" coveredmethods="4"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="32" count="2" type="stmt"/>
+        <metrics statements="15" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
-        <line num="50" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="57" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
         <line num="68" count="0" type="cond" truecount="0" falsecount="2"/>
