@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Buttons } from '../Buttons'
+
 import favorite from '../../assets/icons/favorite.svg'
+import { Buttons } from '../Buttons'
 
 import './styles.scss'
 interface HeaderProps {

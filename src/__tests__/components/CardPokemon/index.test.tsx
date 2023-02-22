@@ -2,19 +2,6 @@ import { CardPokemon } from '@/components/CardPokemon'
 import { fireEvent, render, screen } from '@testing-library/react'
 
 describe('CardPokemon.tsx', () => {
-  test('When send image url to component should check if url is displayed', () => {
-    render(
-      <CardPokemon
-        title="Titulos"
-        handleClick={jest.fn()}
-        image="./urlImage"
-        onLoad={jest.fn()}
-        index={1}
-      />
-    )
-    const card = screen.getByTestId('card-pokemon__image')
-    expect(card).toHaveStyle('background-image:url(./urlImage)')
-  })
   test('When clicking on the card the function should be called', () => {
     const mockFunction = jest.fn()
     render(

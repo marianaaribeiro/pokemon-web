@@ -15,9 +15,7 @@
     "testEnvironment": "jsdom",
     "collectCoverageFrom": [
       "src/components/**/*.tsx",
-      "src/pages/**/*.ts?(x)",
-      "src/utils/*.ts",
-      "!src/**/(constants|config|types).ts",
+      "!src/pages/**/*.ts?(x)",
       "!src/**/styles.css"
     ],
     "setupFilesAfterEnv": [

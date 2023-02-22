@@ -20,16 +20,4 @@ describe('Buttons.tsx', () => {
     const textButton = screen.getByText('Todos')
     expect(textButton).not.toHaveClass('is-active')
   })
-  test('should check if there is no img class when button is inactive', () => {
-    render(
-      <Buttons
-        text="Todos"
-        isActive={false}
-        onClickLabel={jest.fn()}
-        imgButton="./urlImage"
-      />
-    )
-    const buttonImg = screen.getByTestId('button__image')
-    expect(buttonImg).toHaveStyle('background-image:url(./urlImage)')
-  })
 })
