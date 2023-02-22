@@ -41,9 +41,6 @@ executa todos os testes:
 
 - yarn test
 
-## Rodar o projeto local (recomendado com docker)
-
-- docker-compose up // na raiz do projeto
 
 ## Arquitetura
 
