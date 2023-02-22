@@ -23,9 +23,23 @@ Protejo Pokemon:
 
 ## Scripts disponíveis
 
-- yarn dev - inicializa o projeto em modo de desenvolvimento. Abre em http://localhost:5000.
-- yarn test - executa todos os testes.
-- yarn build - constrói a aplicação para produção.
+Deve criar um arquivo na sua pasta raiz chamado de .env e colocar os seguinte conteúdo:
+
+- VITE_API_URL=https://pokeapi.co/api/v2/
+- VITE_API_KEY=de226c0ee4704ecab42dced71605b327
+- VITE_IMAGES_DOMAIN=http://localhost:5000/v2/external/images/
+
+Executar o comando para instalar as dependências:
+
+- yarn
+
+inicializa o projeto em modo de desenvolvimento. Abre em http://localhost:5000 :
+
+- yarn dev
+
+executa todos os testes:
+
+- yarn test
 
 ## Rodar o projeto local (recomendado com docker)
 

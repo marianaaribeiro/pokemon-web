@@ -119,7 +119,9 @@ export const DetailList = ({
       title: 'Grupo',
     },
     {
-      value: details?.evolves_from_species?.name,
+      value: details?.evolves_from_species?.name
+        ? details?.evolves_from_species?.name
+        : 'Não encontrado',
       title: 'Espécie',
     },
   ]
