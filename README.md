@@ -5,7 +5,7 @@ Protejo Pokemon:
 - Lista todos os pokemons na tela inicial
 - A tela inicial tem uma paginação "Ver mais" que vai adicionando mais itens a lista
 - O usuário pode ver o detalhe de cada pokemon ao clicar no card da pagina inicial
-- O usuário pode adicionar um pokemon por vez a sia lista de favoritos
+- O usuário pode adicionar um pokemon por vez a sua lista de favoritos
 - O usuário pode visualizar a sua lista de favoritos
 
 ## Tecnologia usada
