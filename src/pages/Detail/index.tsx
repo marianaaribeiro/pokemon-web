@@ -4,8 +4,8 @@ import { DetailList } from './Blocks/DetailList'
 
 export default function Detail(): JSX.Element {
   const { state } = useLocation()
-  const formPokemon: sring = state.name || ''
-  const image: string = state.imgs || ''
+  const formPokemon: any = state.name || ''
+  const image: any = state.imgs || ''
 
   return (
     <div className="page-detail">

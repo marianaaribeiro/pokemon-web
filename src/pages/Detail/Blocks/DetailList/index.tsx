@@ -34,19 +34,28 @@ export const DetailList = ({
     onFetchDetail(namePokemon)
     onFetchOtherDetails(namePokemon)
   }, [])
+
   useEffect(() => {
     setLoading(true)
     list = fetchFavorites('listPokemon')
-    const filterList = JSON.parse(list).filter(
-      (item: ListFavoritePokemon) => item?.name === details?.name
-    )
-    const namePokemons = filterList.filter(
-      (item: ListFavoritePokemon) => item?.name
-    )
+    const isList: any = list !== null ? JSON.parse(list) : []
 
-    if ((namePokemons && filterList[0]?.name) === (details && details?.name)) {
-      setFavorite(true)
-      setLoading(false)
+    if (isList !== null) {
+      const filterList = isList.filter(
+        (item: ListFavoritePokemon) => item?.name === details?.name
+      )
+      const namePokemons = filterList.filter(
+        (item: ListFavoritePokemon) => item?.name
+      )
+
+      if (
+        (namePokemons && filterList[0]?.name) === (details && details?.name)
+      ) {
+        setFavorite(true)
+        setLoading(false)
+      } else {
+        setLoading(false)
+      }
     } else {
       setLoading(false)
     }
@@ -79,8 +88,8 @@ export const DetailList = ({
       imgPokemon: otherDetails?.sprites?.front_default,
       name: details?.name,
     }
-
-    fetchSaveFavorites('listPokemon', [...JSON.parse(list), item])
+    const itemList: any = list !== null ? JSON.parse(list) : []
+    fetchSaveFavorites('listPokemon', [...itemList, item])
     setFavorite(true)
   }
 
