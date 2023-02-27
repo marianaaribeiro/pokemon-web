@@ -1,5 +1,5 @@
 .card-pokemon {
-  @apply text-center border-hub-card border rounded-lg p-2.5 w-32 h-44;
+  @apply text-center border-hub-card border rounded-lg p-2.5 w-32 h-44 shadow-xl;
 
   &:not(.is-skeleton) {
     @apply bg-hub-card;

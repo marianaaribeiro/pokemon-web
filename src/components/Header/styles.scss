@@ -1,9 +1,12 @@
 .header {
   &.is-favorite {
     @apply text-hub-primary text-xl bg-white h-11 relative mb-5 p-2;
+    span {
+      margin-left: -9px;
+    }
   }
   &.is-no-favorite {
-    @apply flex items-center justify-center text-hub-primary text-xl bg-white h-11 relative mb-5;
+    @apply flex items-center justify-center text-hub-primary text-xl bg-white h-11 relative mb-5 shadow-lg;
   }
   .container-btn {
     margin-top: -32px;
