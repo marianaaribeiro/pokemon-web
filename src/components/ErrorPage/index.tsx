@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 
 import { Buttons } from '../Buttons'
 import { useSkeleton } from '@/hooks/useSkeleton'
-import magicCard from '../../assets/icons/magicCard.svg'
 
 import './styles.scss'
 
@@ -69,7 +68,6 @@ export const ErrorPage = ({
             isActive={false}
             text={isHome ? 'Tentar novamente' : 'Voltar para home'}
             onClickLabel={callback ? callback : () => navigate('/')}
-            imgButton={magicCard}
           />
         </div>
       </div>
