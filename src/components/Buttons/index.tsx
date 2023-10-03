@@ -23,23 +23,21 @@ export const Buttons = ({
   const active = isActive ? 'is-active' : ''
   const imgLeft = imgButton ? 'is-img-left' : ''
   return (
-    <>
-      <button
-        className={`${active} hub-btn ${skeleton()} ${imgLeft}`}
-        onClick={onClickLabel}
-      >
-        {imgButton && (
-          <img
-            src={imgButton}
-            data-testid="button__image"
-            className="hub-imgs"
-            onLoad={() => {
-              setLoading(false)
-            }}
-          />
-        )}
-        {text}
-      </button>
-    </>
+    <button
+      className={`${active} hub-btn ${skeleton()} ${imgLeft}`}
+      onClick={onClickLabel}
+    >
+      {imgButton && (
+        <img
+          src={imgButton}
+          data-testid="button__image"
+          className="hub-imgs"
+          onLoad={() => {
+            setLoading(false)
+          }}
+        />
+      )}
+      {text}
+    </button>
   )
 }

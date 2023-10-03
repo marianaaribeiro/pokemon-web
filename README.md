@@ -1,3 +1,7 @@
+## Descrição
+
+É um projeto que tem o objetivo de listar, favoritar e ver todos os detalhes de cada pokemon.
+
 ## Funcionalidades
 
 Protejo Pokemon:
@@ -21,15 +25,25 @@ Protejo Pokemon:
 - Prettier
 - Eslint
 
-## Scripts disponíveis
+## Etapas para instalação do projeto
 
-Deve criar um arquivo na sua pasta raiz chamado de .env e colocar os seguinte conteúdo:
+O primeiro passo é escolher como deseja criar o seu arquivo env, abaixo tem o passo a passo das opções de como criar:
 
-- VITE_API_URL=https://pokeapi.co/api/v2/
-- VITE_API_KEY=de226c0ee4704ecab42dced71605b327
-- VITE_IMAGES_DOMAIN=http://localhost:5000/v2/external/images/
+- Deve criar um arquivo na sua pasta raiz chamado de .env e colocar os seguinte conteúdo:
 
-Executar o comando para instalar as dependências:
+VITE_API_URL=https://pokeapi.co/api/v2/
+VITE_API_KEY=de226c0ee4704ecab42dced71605b327
+VITE_IMAGES_DOMAIN=http://localhost:5000/v2/external/images/
+
+- Caso ao clonar o projeto já exita o arquivo env, então renomeia o arquivo colocando um ponto antes do nome do arquivo, exemplo: .env
+
+- Outra opção é olhar o arquivo .env-sample que mostra o exemplo de como deve ficar, então apenas deve renomear o arquivo para .env
+
+Segundo passo é executar o comando para instalar as dependências:
+
+- caso não tenha instalado ainda o yarn, execute este comando no seu terminal: npm install --global yarn
+
+Agora pode executar o yarn para instalar as dependências:
 
 - yarn
 
@@ -40,7 +54,6 @@ inicializa o projeto em modo de desenvolvimento. Abre em http://localhost:5000 :
 executa todos os testes:
 
 - yarn test
-
 
 ## Arquitetura
 

@@ -15,9 +15,7 @@ interface ErrorPageProps {
 export const ErrorPage = ({
   callback,
   isLoading,
-  isHome = false,
 }: ErrorPageProps): JSX.Element => {
-  const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [skeleton] = useSkeleton(loading)
 
@@ -49,26 +47,33 @@ export const ErrorPage = ({
           className={`page-error__heading ${skeleton()}`}
           data-testid="page-error__heading"
         >
-          Desculpe, nós <br />
-          erramos!
+          Desculpe, não achamos <br />
+          dados vindo da api!
         </h2>
 
         <p
           className={`text-sm ${skeleton()}`}
           data-testid="page-error__description"
         >
-          Não conseguimos identificar a página
+          Identificaremos o ocorrido, por favor sigas as instruções:
         </p>
+
+        <ul
+          className={`text-sm ${skeleton()}`}
+          data-testid="page-error__description"
+        >
+          <li> - Verifique se sua conexão de internet está lenta! </li>
+          <li> - Troque para uma internet estável! </li>
+          <li> - Atualize a página para saber se o problema continua! </li>
+        </ul>
 
         <div
           className={`mt-10 flex flex-col ${skeleton()}`}
           data-testid="page-error__button"
         >
-          <Buttons
-            isActive={false}
-            text={isHome ? 'Tentar novamente' : 'Voltar para home'}
-            onClickLabel={callback ? callback : () => navigate('/')}
-          />
+          <div className="page-error__btn" onClick={() => location.reload()}>
+            Tentar novamente
+          </div>
         </div>
       </div>
     </div>

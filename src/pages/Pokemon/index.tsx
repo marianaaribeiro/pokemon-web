@@ -2,6 +2,7 @@ import { Header } from '@/components/Header'
 import { useApps } from '@/contexts/AppsContext'
 import { SectionTitle } from '@/components/SectionTitle'
 import { PokemonList } from './Blocks/PokemonList'
+import { ErrorPage } from '@/components/ErrorPage'
 
 export default function Pokemon(): JSX.Element {
   const { home } = useApps()
@@ -17,8 +18,7 @@ export default function Pokemon(): JSX.Element {
         title="Abertura Pokemon"
         allow="autoplay"
       ></iframe>
-
-      <PokemonList list={home} />
+      {home ? <PokemonList list={home} /> : <ErrorPage />}
     </div>
   )
 }

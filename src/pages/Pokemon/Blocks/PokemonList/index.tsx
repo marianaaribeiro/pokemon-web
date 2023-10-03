@@ -24,6 +24,7 @@ export const PokemonList = ({ list }: PokemonListProps): JSX.Element => {
 
   const navigate = useNavigate()
 
+  //função para navegar para outra tela
   const handleClick = (pokemons: ResultsPokemon, imgs: string): void => {
     const name: string = pokemons.name || ''
     navigate(`/detail/${name}`, { state: { name, imgs } })
@@ -53,40 +54,54 @@ export const PokemonList = ({ list }: PokemonListProps): JSX.Element => {
   }
   if (error) return <ErrorPage />
   return (
-    <div className={`pokemon-list ${skeleton('pulse')}`}>
-      <SectionTitle text="Lista de Pokemons" isLoading={loading} />
-
-      <div className="grid lg:gap-x-4 gap-y-4 lg:grid-cols-8 md:gap-x-2 md:gap-y-7 md:grid-cols-5 gap-x-4  grid-cols-3 ">
-        {pokemons.map((pokemons, index) => {
-          return (
-            <CardPokemon
-              handleClick={(value) => handleClick(pokemons, value)}
-              key={`campaign-list-${index}`}
-              image={pokemons?.url}
-              title={pokemons?.name}
-              onLoad={handleLoad}
-              index={index}
-              textButton="Ver Detalhe"
-            />
-          )
-        })}
-      </div>
-      {fetchingPage ? (
+    <>
+      {!list ? (
         <Spinner hScreen={false} />
       ) : (
-        <div
-          className={`pokemon-list__filter grid gap-x-2 gap-y-2 grid-cols-7 ${skeleton()}`}
-        >
-          {pageList?.next !== null && (
-            <div
-              className="pokemon-list__see-more"
-              onClick={() => onFetchDetail(pageList?.next, 1)}
-            >
-              Ver Mais
+        <>
+          {' '}
+          {error ? (
+            <ErrorPage />
+          ) : (
+            <div className={`pokemon-list ${skeleton('pulse')}`}>
+              <SectionTitle text="Lista de Pokemons" isLoading={loading} />
+
+              <div className="grid lg:gap-x-4 gap-y-4 lg:grid-cols-8 md:gap-x-2 md:gap-y-7 md:grid-cols-5 gap-x-4  grid-cols-3 ">
+                {pokemons &&
+                  pokemons.map((pokemons, index) => {
+                    return (
+                      <CardPokemon
+                        handleClick={(value) => handleClick(pokemons, value)}
+                        key={`campaign-list-${index}`}
+                        image={pokemons?.url}
+                        title={pokemons?.name}
+                        onLoad={handleLoad}
+                        index={index}
+                        textButton="Ver Detalhe"
+                      />
+                    )
+                  })}
+              </div>
+              {fetchingPage ? (
+                <Spinner hScreen={false} />
+              ) : (
+                <div
+                  className={`pokemon-list__filter grid gap-x-2 gap-y-2 grid-cols-7 ${skeleton()}`}
+                >
+                  {pageList?.next !== null && (
+                    <div
+                      className="pokemon-list__see-more"
+                      onClick={() => onFetchDetail(pageList?.next, 1)}
+                    >
+                      Ver Mais
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
-        </div>
+        </>
       )}
-    </div>
+    </>
   )
 }

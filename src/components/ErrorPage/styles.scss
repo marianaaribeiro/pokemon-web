@@ -6,10 +6,17 @@
   }
 
   svg {
-    @apply m-auto mb-5
+    @apply m-auto mb-5;
   }
 
-  .hub-btn { 
+  .hub-btn {
     @apply w-full mb-5 h-12 text-base;
+  }
+  &__btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+
+    @apply text-base font-bold text-hub-btn-primary border-2  text-center ml-0.5 p-2.5 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500;
   }
 }

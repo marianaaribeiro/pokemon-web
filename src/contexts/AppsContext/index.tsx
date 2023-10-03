@@ -40,7 +40,7 @@ export const AppsProvider = ({ children }: AppsProviderProps): JSX.Element => {
         })
     }
     document.body.classList.add('light')
-  }, [])
+  }, [params])
 
   return (
     <AppsStateContext.Provider value={{ home }}>
