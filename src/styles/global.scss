@@ -2,7 +2,8 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-.bahia, .ponto {
+.bahia,
+.ponto {
   @apply bg-hub-primary text-hub-body;
 }
 
@@ -14,7 +15,20 @@ a {
   color: transparent !important;
   @apply bg-gray-200 dark:bg-gray-700 bg-auto bg-no-repeat rounded-lg;
 
-  * { 
+  * {
     @apply invisible;
+  }
+}
+
+.ant-list-item {
+  .ant-list-item-meta {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.ant-pagination-item-active {
+  a {
+    background-color: #1890ff;
   }
 }

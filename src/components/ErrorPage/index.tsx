@@ -25,7 +25,7 @@ export const ErrorPage = ({
 
   return (
     <div className={`page-error ${skeleton('pulse')}`}>
-      <div className="text-center w-full">
+      <div className=" text-center w-full">
         <svg
           width="70"
           height="70"

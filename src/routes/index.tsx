@@ -7,10 +7,10 @@ import {
 
 import { Fallback } from './Fallback'
 
-const Pokemon = lazy(() => import('../pages/Pokemon'))
-const Favorite = lazy(() => import('../pages/Favorite'))
+const Home = lazy(() => import('../pages/Home'))
+const ListPokemon = lazy(() => import('../pages/ListPokemon'))
+const PokemonDetails = lazy(() => import('../pages/DetailsPokemon'))
 const NotFound = lazy(() => import('../pages/NotFound'))
-const Detail = lazy(() => import('../pages/Detail'))
 
 export function Routes(): JSX.Element {
   return (
@@ -20,37 +20,55 @@ export function Routes(): JSX.Element {
           path="/"
           element={
             <Fallback>
-              <Pokemon />
+              <Home />
             </Fallback>
           }
-        />
+        >
+          <ReactRoute
+            path="/"
+            element={
+              <Fallback>
+                <ListPokemon />
+              </Fallback>
+            }
+          >
+            <ReactRoute
+              path=":pokemonId"
+              element={
+                <Fallback>
+                  <PokemonDetails />
+                </Fallback>
+              }
+            />
+          </ReactRoute>
 
-        <ReactRoute
-          path="/favorite"
-          element={
-            <Fallback>
-              <Favorite />
-            </Fallback>
-          }
-        />
+          <ReactRoute
+            path="favorites"
+            element={
+              <Fallback>
+                <ListPokemon />
+              </Fallback>
+            }
+          >
+            <ReactRoute
+              path=":pokemonId"
+              element={
+                <Fallback>
+                  <PokemonDetails />
+                </Fallback>
+              }
+            />
+          </ReactRoute>
 
-        <ReactRoute
-          path="/detail/:id"
-          element={
-            <Fallback>
-              <Detail />
-            </Fallback>
-          }
-        />
-
-        <ReactRoute
-          path="*"
-          element={
-            <Fallback>
-              <NotFound />
-            </Fallback>
-          }
-        />
+          <ReactRoute
+            path="*"
+            element={
+              <Fallback>
+                <NotFound />
+              </Fallback>
+            }
+          />
+        </ReactRoute>
       </ReactRoutes>
     </BrowserRouter>
   )

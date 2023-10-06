@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 .light {
+  --background-pages: #ffffff;
+  --background-pages-secundary: #2a2727;
+  --background-pages-third: #7b7878;
+  --background-pages-nulo: #fbf3f3;
+  --background-pages-alert: #fbf3f3;
+
+  --text-color: #060606;
+  --box-shadow-color: #00000090;
+
   --background-page: #f5f5f5;
 
   --text-color-body: #575757;
@@ -27,6 +36,15 @@
 }
 
 .dark {
+  --background-pages: #000000f2;
+  --background-pages-secundary: #20cc23f0;
+  --background-pages-third: #7de57ef0;
+  --background-pages-nulo: #f5f0f0;
+  --background-pages-alert: #41c1d8;
+
+  --text-color: #ffffff;
+  --box-shadow-color: #afa6a6d8;
+
   --background-page: #000;
 
   --text-color-body: #575757;

@@ -1,52 +1,75 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from 'react'
-
-import { Pokemon } from '@/services/Pokemon/types'
 import { fetchPokemon } from '@/services/Pokemon'
+import { PokemonDetails, Pokemon } from '../../services/types'
+import { LIST_URLS } from '../../helper'
+import { createContext, ReactNode, useState, useContext } from 'react'
+import { fetchListDetails } from '@/services/ListDetails'
 
-interface AppsContextData {
-  home: Pokemon
+type AppsContextProps = {
+  children?: ReactNode
+  listPokemon?: Pokemon
+  pokemonDetails?: PokemonDetails
+  isLoading: boolean
+  getPokemonDetails?: (pokemonId: string) => void
+  getListPokemon?: (offset?: number, limit?: number) => void
 }
 
-interface AppsProviderProps {
-  children: ReactNode
+const initialState: AppsContextProps = {
+  isLoading: false,
 }
 
-const AppsStateContext = createContext({} as AppsContextData)
-
+const AppsStateContext = createContext<AppsContextProps>(initialState)
 AppsStateContext.displayName = 'AppsStateContext'
 
-export const AppsProvider = ({ children }: AppsProviderProps): JSX.Element => {
-  const [home, setHome] = useState<Pokemon>(null!)
-  const [success, setSuccess] = useState(false)
-  const params = {
-    value: 8,
+export const AppsProvider = ({ children }: AppsContextProps): JSX.Element => {
+  const [isLoading, setIsLoading] = useState(initialState.isLoading)
+  const [listPokemon, setListPokemon] = useState<Pokemon | undefined>(undefined)
+  const [pokemonDetails, setPokemonDetails] = useState<
+    PokemonDetails | undefined
+  >(undefined)
+
+  const getListPokemon = async (offset?: number, limit?: number) => {
+    setIsLoading(true)
+    let urlListPokemon = LIST_URLS.listPokemon
+
+    if (!!limit) {
+      urlListPokemon += `?offset=${offset}&limit=${limit}`
+    }
+
+    fetchPokemon(urlListPokemon)
+      .then((data: Pokemon) => {
+        console.log('teste', data)
+        setListPokemon(data)
+        setIsLoading(false)
+      })
+      .catch((error) => console.error(error))
   }
 
-  useEffect(() => {
-    if (!success) {
-      fetchPokemon(params.value)
-        .then((response) => {
-          setHome(response)
-          setSuccess(true)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-    }
-    document.body.classList.add('light')
-  }, [params])
+  const getPokemonDetails = (id: string) => {
+    setIsLoading(true)
+
+    fetchListDetails(LIST_URLS.listPokemon + id)
+      .then((data: PokemonDetails) => {
+        console.log('teste 1', data)
+        setIsLoading(false)
+        setPokemonDetails(data)
+      })
+      .catch((error) => console.error(error))
+  }
 
   return (
-    <AppsStateContext.Provider value={{ home }}>
+    <AppsStateContext.Provider
+      value={{
+        isLoading,
+        listPokemon,
+        pokemonDetails,
+        getListPokemon,
+        getPokemonDetails,
+      }}
+    >
       {children}
     </AppsStateContext.Provider>
   )
 }
 
-export const useApps: () => AppsContextData = () => useContext(AppsStateContext)
+export const useApps: () => AppsContextProps = () =>
+  useContext(AppsStateContext)

@@ -1,0 +1,6 @@
+.page-home {
+  @apply bg-hub-page-nulo h-screen;
+  &__children {
+    @apply bg-hub-page-nulo;
+  }
+}

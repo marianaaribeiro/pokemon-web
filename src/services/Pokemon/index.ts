@@ -1,12 +1,8 @@
 import { api } from '../api'
-import { Pokemon } from './types'
+import { Pokemon } from '../types'
 
 export const fetchPokemon = async (
-  value: number | string
+  urlListPokemon: string
 ): Promise<Pokemon> => {
-  return (
-    await api.get<Pokemon>(
-      `${typeof value === 'string' ? value : `pokemon?limit=${value}&offset=0`}`
-    )
-  ).data
+  return (await api.get<Pokemon>(`${urlListPokemon}`)).data
 }

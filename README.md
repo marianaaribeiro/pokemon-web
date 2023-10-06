@@ -32,8 +32,6 @@ O primeiro passo é escolher como deseja criar o seu arquivo env, abaixo tem o p
 - Deve criar um arquivo na sua pasta raiz chamado de .env e colocar os seguinte conteúdo:
 
 VITE_API_URL=https://pokeapi.co/api/v2/
-VITE_API_KEY=de226c0ee4704ecab42dced71605b327
-VITE_IMAGES_DOMAIN=http://localhost:5000/v2/external/images/
 
 - Caso ao clonar o projeto já exita o arquivo env, então renomeia o arquivo colocando um ponto antes do nome do arquivo, exemplo: .env
 
@@ -47,9 +45,9 @@ Agora pode executar o yarn para instalar as dependências:
 
 - yarn
 
-inicializa o projeto em modo de desenvolvimento. Abre em http://localhost:5000 :
+inicializa o projeto em modo de desenvolvimento. Abre em http://localhost:3000 :
 
-- yarn dev
+- yarn start
 
 executa todos os testes:
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useSkeleton } from '@/hooks/useSkeleton'
-import { fetchList } from '@/services/PokemonDetails'
+import { fetchDetail } from '@/services/PokemonDetails'
 import './styles.scss'
 
 interface CardPokemonProps {
@@ -29,7 +29,7 @@ export const CardPokemon = ({
   }, [image])
 
   const onFetchDetails = (urlCard: string): void => {
-    fetchList(urlCard)
+    fetchDetail(urlCard)
       .then((response) => {
         setImgCard({
           name: response.name,

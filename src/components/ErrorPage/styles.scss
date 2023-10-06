@@ -2,7 +2,8 @@
   @apply m-4 flex items-center justify-center h-screen;
 
   &__heading {
-    @apply text-hub-primary text-xl mb-1;
+    border-radius: 10px;
+    @apply bg-hub-page-alert text-hub-primary text-xl mb-1;
   }
 
   svg {

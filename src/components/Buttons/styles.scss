@@ -18,10 +18,10 @@
 .hub-btn {
   height: 36px;
 
-  @apply text-sm font-bold text-hub-btn-primary border-hub-btn-primary-out  text-center py-2 px-4 rounded-lg transition ease-in-out delay-150 mr-2 bg-gradient-to-r from-green-300 to-blue-500 hover:scale-110 hover:duration-500  hover:from-pink-500 hover:to-yellow-500;
+  @apply text-sm font-bold  text-hub-primary border-hub-btn-primary-out  text-center py-2 px-4 rounded-lg transition ease-in-out delay-150 mr-2 bg-gradient-to-r from-green-300 to-blue-500 hover:scale-110 hover:duration-500  hover:from-pink-500 hover:to-yellow-500;
 
   &.is-active {
-    @apply font-bold text-hub-btn-primary bg-hub-btn-primary;
+    @apply font-bold text-hub-primary bg-hub-btn-primary;
 
     @extend %primaryRippleEffect;
   }
